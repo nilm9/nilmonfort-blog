@@ -81,10 +81,10 @@ nav:
 
 extra:
   social:
-    - icon: fontawesome/brands/x-twitter
-      link: https://x.com/nilmonfort
+    - icon: fontawesome/solid/envelope
+      link: mailto:nilmonfort98@gmail.com
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/nilmonfort/
+      link: https://www.linkedin.com/in/nil-monfort-761660213/
     - icon: fontawesome/brands/github
       link: https://github.com/nilm9
   generator: false   # hide footer generator text
