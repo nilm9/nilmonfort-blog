@@ -10,7 +10,7 @@
 
 ## Executive Summary
 
-I’m an AI/ML engineer focused on **scalable, end-to-end systems**: RAG platforms, agentic microservices, and production data pipelines. I favor **clean architecture** (hexagonal/ports-and-adapters), strong **observability**, and fast iteration. I’ve built meta-assistant tooling, **LLM validation** services, and data workflows that turn traces into **actionable insights**. Previously I improved fleet-matching algorithms and shipped ML on **AWS/Azure**; today I apply those skills to **LLM-native apps** that drive measurable outcomes.
+I’m an AI/ML engineer focused on **scalable, end-to-end systems**: RAG platforms, agentic microservices, and Cloud Infrastructure. I like **clean architecture** (hexagonal/ports-and-adapters), strong **observability**, and fast iteration. I’ve built meta-assistant tooling, **LLM validation** services, and data workflows that turn traces into **actionable insights**. Previously I improved fleet-matching algorithms and shipped ML on **AWS/Azure**; today I apply those skills to **LLM-native apps** that drive measurable outcomes.
 
 ---
 
@@ -18,7 +18,7 @@ I’m an AI/ML engineer focused on **scalable, end-to-end systems**: RAG platfor
 
 ### AI Engineer — Inditex (Knowmad Mood) · Barcelona, Spain  
 **Jan 2025 – Present**
-- End-to-end **RAG platform**: multi-tenant vectors, hybrid dense+lexical, pluggable LLMs (OpenAI/Gemini/Ollama).  
+- End-to-end **RAG platform**: multi-tenant vectors, hybrid dense+lexical, pluggable LLMs.  
 - **Conversational assistants** over **60+** unstructured sources; material productivity gains.  
 - **AI Truth Guard** (FastAPI, hexagonal): precision/recall, tool-selection checks, **SSE** streaming, **PostgreSQL** metrics, async runs.  
 - **Trace analytics** (clustering + sentiment) → product insights.
@@ -26,24 +26,28 @@ I’m an AI/ML engineer focused on **scalable, end-to-end systems**: RAG platfor
 ### AI Architect — Freelancer (Contract) · Barcelona, Spain  
 **Jan 2025 – Present**
 - **GenAI design assistant** with agentic workflows; designers’ speed **50×**.  
-- **Full-stack** ideation (React + Python) with multimodal gen/edit, prompt suggestions, classification.  
-- **Clean/Hexagonal** LLM integration; ML quality steps (KNN, Lanczos).  
+- **Full-stack** ideation (React + Python) with multimodal ai, prompt suggestions, classification.  
+- **Clean/Hexagonal** LLM integration; ML image enhancement (KNN, Lanczos).  
 - **Serverless, event-driven AWS** deployment with **CDK** (IaC).
 
 ### Data Engineer — Propelling Tech · Barcelona, Spain  
 **Sep 2024 – Jan 2025**
-- **Medallion Architecture** on **Databricks** (PySpark/Spark SQL); ingestion from SQL Server & Oracle to **Delta/BigQuery**.  
+- **Medallion Architecture** on **Databricks** (PySpark/Spark SQL); ingestion from SQL Server & Oracle to **DLT/BigQuery**.  
 - Near-real-time BI (Power BI); automation across **GCP Composer/Airflow** and **Azure Data Factory**.
 
 ### Machine Learning Engineer — Avantcab · Spain  
 **May 2023 – Jun 2024**
-- **Sub-second** taxi allocation (genetic/greedy/heuristics on **AWS Lambda**) with aggressive caching + thorough tests.  
+- **Sub-second** taxi allocation (genetic/greedy/heuristics on **AWS Lambda**) with caching + pyramid testing.  
 - Two-stage **flight delay** prediction (classifier + **XGBoost** regressor).
 
 ### Full-Stack Developer — DATOMA · Spain  
 **Jan 2023 – Sep 2023**
 - **Genomic Marketplace** (TypeScript, Vue, PrimeVue) on **AWS Amplify** with **Cognito** auth.  
 - Event-driven workflows (**SQS + Lambda**) and **CloudWatch** observability.
+
+### Freelance Software Developer · Spain  
+**Jan 2021 – Sep 2023**
+- **𝗪𝗲𝗯 𝗔𝗽𝗽𝗹𝗶𝗰𝗮𝘁𝗶𝗼𝗻 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗺𝗲𝗻𝘁:** Leveraged the **MERN** stack (MongoDB, Express, React, Node.js), Google Firestore, JavaScript, HTML, and CSS, alongside WordPress, to build high-performance, aesthetically polished user interfaces and backend services.
 
 ---
 
