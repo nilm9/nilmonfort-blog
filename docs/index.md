@@ -7,9 +7,9 @@ hide:
   <div class="hero-content">
     <h1>Hey, I'm Nil Monfort</h1>
     
-    <p>I'm an AI/Machine Learning Engineer passionate about building intelligent systems that solve real-world problems. I write about RAG architectures, LLM applications, and the intersection of AI and clean software engineering.</p>
+    <p>I'm an AI Cloud Engineer passionate about building intelligent systems that solve real-world problems. I write about RAG architectures, LLM applications, and the intersection of AI and clean software engineering.</p>
     
-    <p>Currently working as an AI Engineer at Inditex and sharing insights through <a href="/writing/">my writing</a>.</p>
+    <p>Currently working as an AI Engineer at Inditex and sharing insights through <a href="writing/">my writing</a>.</p>
   </div>
   
   <div class="hero-image">
@@ -21,32 +21,17 @@ hide:
 
 ## Latest writing
 
-### [Ship Faster Without Breaking Your Agent](/writing/2025/01/20/ship-faster-without-breaking-your-agent/)
+### [How I Build Python Projects (My Way, Simple & Solid)](writing/2025/01/30/how-i-build-python-projects-my-way-simple-and-solid/)
 
-*A tiny evaluator that catches prompt drift and tool bugs before your users do.*
+*An opinionated, scalable way to structure Python projects using hexagonal architecture, SOLID, and practical DDD.*
 
-Every time I changed my agent's prompt or a tool description, something else broke. Tool B started working and Tool A began to hallucinate. Rolling back and retesting by hand was slow and noisy. I needed a quick truth check I could run on every change.
+If I'll spend more than three days on a project, I shape it with hexagonal architecture. Not the textbook kind, just enough to keep options open. The core idea is simple: business rules in the center, tools at the edges, and small contracts between them.
 
-[Continue reading →](/writing/2025/01/20/ship-faster-without-breaking-your-agent/)
-
----
-
-### [From Taxi Allocation to LLM Validation: My Journey in AI Engineering](/writing/2025/01/15/from-taxi-allocation-to-llm-validation-my-journey-in-ai-engineering/)
-
-Looking back at my journey from developing taxi allocation algorithms to building LLM validation systems, I've learned that AI engineering is as much about solving real-world problems as it is about understanding the latest models and frameworks.
-
-[Continue reading →](/writing/2025/01/15/from-taxi-allocation-to-llm-validation-my-journey-in-ai-engineering/)
+[Continue reading →](writing/2025/01/30/how-i-build-python-projects-my-way-simple-and-solid/)
 
 ---
 
-### [Building Production-Ready RAG Systems with Hexagonal Architecture](/writing/2025/01/01/building-production-ready-rag-systems-with-hexagonal-architecture/)
-
-Building production-ready RAG (Retrieval-Augmented Generation) systems requires more than just connecting a vector database to an LLM. After leading the development of a multi-tenant RAG platform at Inditex, I've learned valuable lessons about architecture, scalability, and reliability.
-
-[Continue reading →](/writing/2025/01/01/building-production-ready-rag-systems-with-hexagonal-architecture/)
-
----
-
+<!--
 ## What People Say
 
 <div class="testimonial">
@@ -78,11 +63,10 @@ Building production-ready RAG (Retrieval-Augmented Generation) systems requires 
     </div>
   </div>
 </div>
+-->
 
 ---
 
-*See more on the [Writing](/writing/) page.*
+*See more on the [Writing](writing/) page.*
 
 ---
-
-*Follow my journey: [RSS Feed](/feed_rss_created_by_rss_plugin.xml) • [GitHub](https://github.com/nilmonfort) • [Twitter](https://x.com/nilmonfort)*

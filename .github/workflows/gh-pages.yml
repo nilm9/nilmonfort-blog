@@ -1,7 +1,8 @@
 name: Deploy MkDocs
 on:
-  push:
-    branches: [ main ]
+  workflow_dispatch: {} 
+  #push:
+  #  branches: [ main ]
 permissions:
   contents: write
 jobs:

@@ -38,7 +38,7 @@
 }
 
 .blog-card h3 a {
-  color: var(--md-accent-fg-color);
+  color: #06b6d4;
   text-decoration: none;
   border-bottom: none;
   transition: all 0.2s ease;
@@ -91,6 +91,7 @@
   font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
+  color: var(--md-typeset-color);
 }
 
 .md-typeset h2 {
@@ -98,12 +99,14 @@
   margin-top: 2.5rem;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
+  color: var(--md-typeset-color);
 }
 
 .md-typeset h3 {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: 600;
+  color: var(--md-typeset-color);
 }
 
 /* better spacing for lists */
@@ -127,14 +130,14 @@
 
 /* links */
 .md-typeset a {
-  color: #007bff;
+  color: #06b6d4;
   text-decoration: none;
   border-bottom: none;
   transition: color 0.2s ease;
 }
 
 .md-typeset a:hover {
-  color: #0056b3;
+  color: #0891b2;
   text-decoration: underline;
 }
 
@@ -161,6 +164,7 @@
 .md-typeset h1:first-child {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
+  color: var(--md-typeset-color);
 }
 
 /* project cards */
@@ -168,6 +172,7 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: 600;
+  color: var(--md-typeset-color);
 }
 
 /* better paragraph spacing */
@@ -213,7 +218,7 @@
 }
 
 .back-link a:hover {
-  color: #007bff;
+  color: #06b6d4;
 }
 
 .author-info {
@@ -293,7 +298,7 @@
 }
 
 .toc-nav a:hover {
-  color: #007bff;
+  color: #06b6d4;
 }
 
 /* blog post content styling */
@@ -305,7 +310,7 @@
 .blog-content h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #6c757d;
+  color: var(--md-typeset-color);
   margin-bottom: 2rem;
   line-height: 1.2;
 }
@@ -313,7 +318,7 @@
 .blog-content h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #212529;
+  color: var(--md-typeset-color);
   margin-top: 2.5rem;
   margin-bottom: 1rem;
 }
@@ -321,13 +326,13 @@
 .blog-content h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #212529;
+  color: var(--md-typeset-color);
   margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
 
 .blog-content p {
-  color: #495057;
+  color: var(--md-typeset-color);
   line-height: 1.7;
   margin-bottom: 1.25rem;
 }
@@ -378,7 +383,7 @@
 .hero-content h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #212529;
+  color: var(--md-typeset-color);
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
@@ -386,7 +391,7 @@
 .hero-content p {
   font-size: 1.125rem;
   line-height: 1.6;
-  color: #495057;
+  color: var(--md-typeset-color);
   margin-bottom: 1rem;
 }
 

@@ -1,6 +1,6 @@
 site_name: Nil Monfort
 site_url: https://nilmonfort.com
-repo_url: https://github.com/nilmonfort/nilmonfort-blog
+#repo_url: https://github.com/nilmonfort/nilmonfort-blog
 theme:
   name: material
   logo: assets/images/logo.svg
@@ -14,7 +14,7 @@ theme:
     - toc.integrate
     - toc.follow
     - content.code.copy
-    - content.action.edit
+    #- content.action.edit
     - content.tabs.link
     - search.suggest
     - search.highlight
@@ -75,7 +75,7 @@ nav:
   - Writing:
     - writing/index.md
     - Tags: writing/tags.md
-  - Projects: projects.md
+  #- Projects: projects.md
   - Resume: resume.md
   - About: about.md
 
@@ -86,7 +86,7 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/nilmonfort/
     - icon: fontawesome/brands/github
-      link: https://github.com/nilmonfort
+      link: https://github.com/nilm9
   generator: false   # hide footer generator text
 
 extra_css:
