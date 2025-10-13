@@ -4,7 +4,7 @@ site_url: https://nilmonfort.com
 theme:
   name: material
   logo: assets/images/logo.svg
-  favicon: assets/images/logo.svg
+  favicon: assets/images/favicon.ico
   custom_dir: docs/overrides
   features:
     - navigation.tabs
