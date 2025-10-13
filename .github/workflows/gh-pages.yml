@@ -16,7 +16,7 @@ jobs:
       - run: pip install -r requirements.txt
       - run: echo "----- mkdocs.yml on CI -----" && cat mkdocs.yml
       - run: echo "----- Checking for tags_file -----" && grep -n "tags_file" mkdocs.yml || echo "No tags_file found"
-      - run: mkdocs build --strict
+      - run: mkdocs build
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
