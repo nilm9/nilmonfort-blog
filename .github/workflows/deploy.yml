@@ -1,8 +1,8 @@
 name: Deploy MkDocs to GitHub Pages
 on:
-  #workflow_dispatch: {}
-  push:
-   branches: [ main ]
+  workflow_dispatch: {}
+  # push:
+  #   branches: [ main ]     # uncomment if you want auto-publish on push
 permissions:
   contents: read
   pages: write
@@ -10,21 +10,23 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }   # good for plugins reading git history
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
       - run: pip install -r requirements.txt
       - run: mkdocs build
-      - run: echo "nilmonfort.com" > site/CNAME
+      - run: echo "nilmonfort.com" > site/CNAME   # optional now, handy later
       - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
+        with: { path: site }
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
