@@ -1,9 +1,10 @@
 name: Deploy MkDocs to GitHub Pages
 
 on:
+  push:
+   branches: [ main ]   # uncomment for auto deploys
+
   workflow_dispatch: {}
-  # push:
-  #   branches: [ main ]   # uncomment for auto deploys
 
 permissions:
   contents: read
