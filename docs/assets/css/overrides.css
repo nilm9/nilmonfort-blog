@@ -1,5 +1,5 @@
-/* narrower readable measure */
-.md-content { max-width: 1280px; }
+/* content width via Material grid (readable measure) */
+.md-grid { max-width: 72rem; }
 .md-content__inner > h1:first-child { margin-top: 0.25rem; }
 
 /* table of contents spacing */
@@ -126,6 +126,15 @@
   padding: 0.2em 0.4em;
   border-radius: 4px;
   font-size: 0.9em;
+  overflow-wrap: anywhere; /* allow wrapping on small screens */
+}
+
+/* wrap long code on mobile to avoid horizontal scroll */
+pre code { white-space: pre-wrap; }
+
+/* Hide right sidebar (ToC) below ~1200px to give the article more room */
+@media (max-width: 75em) {
+  .md-sidebar--secondary { display: none; }
 }
 
 /* links */
@@ -480,7 +489,7 @@
   .hero-section {
     flex-direction: column;
     gap: 2rem;
-    text-align: center;
+    text-align: left; /* left-align hero content on mobile */
   }
   
   .hero-content h1 {
@@ -514,6 +523,15 @@
     padding: 1rem;
   }
   
+  /* ensure body text and headings are left-aligned on mobile */
+  .md-typeset,
+  .md-typeset h1,
+  .md-typeset h2,
+  .md-typeset h3,
+  .md-typeset p {
+    text-align: left;
+  }
+
   .blog-posts-grid {
     gap: 1.5rem;
   }
