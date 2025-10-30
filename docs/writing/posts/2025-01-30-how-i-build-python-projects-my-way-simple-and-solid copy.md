@@ -15,6 +15,9 @@ tags:
   - ddd
   - hexagonal-architecture
 image: ../../assets/images/nil_profile_img.jpeg
+hide:
+  - navigation
+  - toc
 ---
 
 # How I Build Python Projects (My Way, Simple & Solid)
@@ -197,6 +200,8 @@ code/
 │
 └─ __init__.py (scattered)          # Package markers
 ```
+
+
 
 ## What “good” feels like day to day
 
