@@ -17,7 +17,6 @@ tags:
 image: ../../assets/images/nil_profile_img.jpeg
 hide:
   - navigation
-  - toc
 ---
 
 # How I Build Python Projects (My Way, Simple & Solid)

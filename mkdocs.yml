@@ -12,7 +12,7 @@ theme:
     - navigation.sections
     - navigation.top
     - navigation.indexes
-    - toc.integrate
+    # - toc.integrate   # keep OFF for proper sidebar alignment
     - toc.follow
     - content.code.copy
     #- content.action.edit

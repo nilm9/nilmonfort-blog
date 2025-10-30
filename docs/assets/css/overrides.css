@@ -1,15 +1,11 @@
-/* content width via Material main grid only (keeps header/footer default) */
-.md-main__inner.md-grid { max-width: 72rem; }
+/* Optional: adjust overall page width via .md-grid only */
+@media (min-width: 76.25em) {
+  .md-grid {
+    max-width: 1280px;  /* adjust to taste: 1200-1400px */
+  }
+}
+
 .md-content__inner > h1:first-child { margin-top: 0.25rem; }
-
-/* table of contents spacing */
-.md-sidebar--secondary {
-  margin-left: 2rem;
-}
-
-.md-nav--secondary {
-  margin-top: 1rem;
-}
 
 /* blog card styling */
 .blog-card {
@@ -160,13 +156,6 @@ pre code { white-space: pre-wrap; }
 /* better spacing for sections */
 .md-typeset > * {
   margin-bottom: 1rem;
-}
-
-/* ensure consistent content alignment */
-.md-content__inner {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 1rem;
 }
 
 /* homepage specific styling */

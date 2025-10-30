@@ -18,7 +18,6 @@ tags:
 image: ../../assets/images/nil_profile_img.jpeg
 hide:
   - navigation
-  - toc
 ---
 
 Everyone is obsessed with AI agents right now. Autonomous systems that plan and execute tasks. Multi-step reasoning. Tool use. The whole package.
