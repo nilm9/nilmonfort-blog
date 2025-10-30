@@ -96,3 +96,4 @@ Thumbs.db
 # Local development
 .local/
 
+docs/writing/posts/mermaid_export.py
