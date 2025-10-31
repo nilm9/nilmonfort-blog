@@ -1,6 +1,7 @@
 ---
 title: About
-
+hide:
+  - navigation
 ---
 
 <div class="hero-section">
@@ -14,6 +15,7 @@ title: About
     <img src="/assets/images/nil_profile_img.jpeg" alt="Nil Monfort - AI/Machine Learning Engineer" />
   </div>
 </div>
+
 
 ## What I build
 
