@@ -23,13 +23,11 @@ hide:
 
 *An opinionated, scalable way to structure Python projects using hexagonal architecture, SOLID, and practical DDD.*
 
-A friend asked me: *“What’s the proper way to build a Python project?”* Here’s my take.
+A friend asked me: *"What's the proper way to build a Python project?"* Here's my take. It's what I use for clients and at my 9 to 5. I like SOLID and Domain‑Driven Design, but I don't chase perfection. I just want code that stays tidy when the app grows.
 
 <!-- more -->
 
 ---
-
-It’s what I use for clients and at my 9 to 5. I like SOLID and Domain‑Driven Design, but I don’t chase perfection. I just want code that stays tidy when the app grows.
 
 Python is flexible. That’s great until the codebase gets big and files start calling each other in weird ways. In compiled worlds like Java, the compiler blocks some messes before they spread. In Python, you can ship those messes. So I add a few small rules that make good habits the default.
 

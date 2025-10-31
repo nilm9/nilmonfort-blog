@@ -26,6 +26,8 @@ Meanwhile, half the apps you use every day run on recommender systems. Netflix t
 
 I spent last year deep in recommender systems for my computer science degree. Built a few from scratch. Learned what works and what breaks at scale. The best part? If you've worked with RAG applications, you already understand half of it. The concepts overlap way more than you'd think.
 
+<!-- more -->
+
 ## The Two Core Approaches
 
 Recommender systems boil down to two main techniques. Collaborative filtering and content-based filtering. Each solves the recommendation problem from a different angle.
