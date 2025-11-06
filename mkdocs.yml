@@ -1,3 +1,6 @@
+# Global JS to initialize Mermaid brand theme
+extra_javascript:
+  - assets/javascripts/mermaid-init.js
 site_name: Nil Monfort
 site_url: https://nilmonfort.com
 #repo_url: https://github.com/nilmonfort/nilmonfort-blog

@@ -1,0 +1,23 @@
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#00BCD4','primaryTextColor':'#fff','primaryBorderColor':'#0097A7','lineColor':'#00ACC1','secondaryColor':'#B2EBF2','tertiaryColor':'#E0F7FA'}}}%%
+sequenceDiagram
+    participant User
+    participant API
+    participant AI Model
+    
+    Note over User,AI Model: Synchronous (Bad)
+    User->>API: Generate image
+    API->>AI Model: Process (35 seconds)
+    Note over User: Waiting... waiting...
+    AI Model-->>API: Result
+    API-->>User: Here's your image
+    Note over User: Finally! (or timeout)
+    
+    Note over User,AI Model: Asynchronous (Good)
+    User->>API: Generate image
+    API-->>User: Job ID: abc123 (instant)
+    Note over User: Can close browser, do other things
+    API->>AI Model: Process in background
+    AI Model-->>API: Done
+    User->>API: Check status?
+    API-->>User: Ready! Here's your image

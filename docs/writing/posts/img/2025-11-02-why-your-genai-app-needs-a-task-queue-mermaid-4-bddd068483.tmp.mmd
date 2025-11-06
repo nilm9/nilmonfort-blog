@@ -1,0 +1,25 @@
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#00BCD4','primaryTextColor':'#fff','primaryBorderColor':'#0097A7','lineColor':'#00ACC1','secondaryColor':'#B2EBF2','tertiaryColor':'#E0F7FA'}}}%%
+flowchart TD
+    A[User Request] --> B[Analyze Prompt<br/>3 seconds]
+    B --> C[Generate Image 1<br/>35 seconds]
+    B --> D[Generate Image 2<br/>35 seconds]
+    B --> E[Generate Image 3<br/>35 seconds]
+    B --> F[Generate Image 4<br/>35 seconds]
+    C --> G[Select Best<br/>5 seconds]
+    D --> G
+    E --> G
+    F --> G
+    G --> H[Final Result]
+    
+    style A fill:#00BCD4,stroke:#0097A7,stroke-width:2px,color:#fff
+    style B fill:#00ACC1,stroke:#00838F,stroke-width:2px,color:#fff
+    style C fill:#4DD0E1,stroke:#00BCD4,stroke-width:2px,color:#000
+    style D fill:#4DD0E1,stroke:#00BCD4,stroke-width:2px,color:#000
+    style E fill:#4DD0E1,stroke:#00BCD4,stroke-width:2px,color:#000
+    style F fill:#4DD0E1,stroke:#00BCD4,stroke-width:2px,color:#000
+    style G fill:#B2EBF2,stroke:#00ACC1,stroke-width:2px,color:#000
+    style H fill:#00BCD4,stroke:#0097A7,stroke-width:2px,color:#fff
+    
+    Note1[Sequential: 147s]
+    Note2[Parallel: 43s]
