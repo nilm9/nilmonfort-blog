@@ -97,3 +97,7 @@ Thumbs.db
 .local/
 
 docs/writing/posts/mermaid_export.py
+
+docs/writing/posts/mermaid-config.json
+
+docs/writing/posts/puppeteer-config.json
