@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Nil Monfort
 
 **AI Engineer • Cloud Architect • Fitness Enthusiast**  

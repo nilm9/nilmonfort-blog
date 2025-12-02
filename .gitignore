@@ -101,3 +101,11 @@ docs/writing/posts/mermaid_export.py
 docs/writing/posts/mermaid-config.json
 
 docs/writing/posts/puppeteer-config.json
+
+.claude
+
+.cursor
+
+# Blog drafts (local only)
+.drafts/*
+!.drafts/.gitkeep
