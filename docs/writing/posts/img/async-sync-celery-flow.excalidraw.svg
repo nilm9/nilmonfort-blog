@@ -1,0 +1,57 @@
+<svg viewBox="0 0 650 450" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: bold 14px 'Open Sans', sans-serif; fill: #333333; }
+    .subtitle { font: 12px 'Open Sans', sans-serif; fill: #666666; }
+    .label { font: 11px 'Open Sans', sans-serif; fill: #666666; }
+    .code { font: 10px 'Courier New', monospace; fill: #333333; }
+    .bridge { font: bold 10px 'Open Sans', sans-serif; fill: #039BE5; }
+  </style>
+
+  <!-- Celery Job (Tertiary) -->
+  <ellipse cx="220" cy="35" rx="100" ry="25" fill="#80DEEA" stroke="#0097A7" stroke-width="2"/>
+  <text x="220" y="40" text-anchor="middle" class="title">Celery picks up a job</text>
+
+  <!-- Arrow 1 -->
+  <line x1="220" y1="60" x2="220" y2="90" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Worker Handler (Secondary - sync) -->
+  <rect x="110" y="90" width="220" height="70" rx="8" fill="#E0F7FA" stroke="#00ACC1" stroke-width="2"/>
+  <text x="220" y="118" text-anchor="middle" class="title">Worker Handler</text>
+  <text x="220" y="138" text-anchor="middle" class="subtitle">(def)</text>
+  <text x="350" y="125" class="label">← sync world (no event loop)</text>
+
+  <!-- Dashed line (boundary) -->
+  <line x1="60" y1="185" x2="450" y2="185" stroke="#9E9E9E" stroke-width="1" stroke-dasharray="5,5"/>
+
+  <!-- Arrow 2 (bridge - Accent) -->
+  <line x1="220" y1="160" x2="220" y2="220" stroke="#039BE5" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <rect x="235" y="170" width="70" height="22" rx="4" fill="#E1F5FE" stroke="#039BE5" stroke-width="1"/>
+  <text x="270" y="185" text-anchor="middle" class="bridge">BRIDGE</text>
+  <text x="40" y="182" class="code">loop.run_until_complete(...)</text>
+
+  <!-- Use Case (Primary - async) -->
+  <rect x="110" y="220" width="220" height="70" rx="8" fill="#B2EBF2" stroke="#06b6d4" stroke-width="2"/>
+  <text x="220" y="248" text-anchor="middle" class="title">Use Case</text>
+  <text x="220" y="268" text-anchor="middle" class="subtitle">(async def)</text>
+  <text x="350" y="255" class="label">← async (temporary event loop)</text>
+
+  <!-- Arrow 3 -->
+  <line x1="220" y1="290" x2="220" y2="320" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="240" y="310" class="code">asyncio.to_thread(...)</text>
+
+  <!-- Repository (Secondary - sync) -->
+  <rect x="110" y="320" width="220" height="70" rx="8" fill="#E0F7FA" stroke="#00ACC1" stroke-width="2"/>
+  <text x="220" y="348" text-anchor="middle" class="title">Repository</text>
+  <text x="220" y="368" text-anchor="middle" class="subtitle">(def)</text>
+  <text x="350" y="355" class="label">← sync world</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333333"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#039BE5"/>
+    </marker>
+  </defs>
+</svg>

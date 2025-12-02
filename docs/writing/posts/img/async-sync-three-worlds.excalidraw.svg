@@ -1,0 +1,32 @@
+<svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: bold 20px 'Open Sans', sans-serif; fill: #333333; }
+    .box-title { font: bold 14px 'Open Sans', sans-serif; fill: #333333; }
+    .box-subtitle { font: 12px 'Open Sans', sans-serif; fill: #333333; }
+    .box-detail { font: italic 11px 'Open Sans', sans-serif; fill: #666666; }
+  </style>
+
+  <!-- Container (Neutral) -->
+  <rect x="50" y="70" width="700" height="200" rx="12" fill="#F5F5F5" stroke="#9E9E9E" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="400" y="45" text-anchor="middle" class="title">YOUR APPLICATION</text>
+
+  <!-- Celery Worker Box (Secondary - sync) -->
+  <rect x="80" y="100" width="180" height="140" rx="8" fill="#E0F7FA" stroke="#00ACC1" stroke-width="2"/>
+  <text x="170" y="135" text-anchor="middle" class="box-title">CELERY WORKER</text>
+  <text x="170" y="160" text-anchor="middle" class="box-subtitle">SYNC ONLY</text>
+  <text x="170" y="215" text-anchor="middle" class="box-detail">(threads)</text>
+
+  <!-- FastAPI Server Box (Primary - async) -->
+  <rect x="310" y="100" width="180" height="140" rx="8" fill="#B2EBF2" stroke="#06b6d4" stroke-width="2"/>
+  <text x="400" y="135" text-anchor="middle" class="box-title">FASTAPI SERVER</text>
+  <text x="400" y="160" text-anchor="middle" class="box-subtitle">ASYNC ONLY</text>
+  <text x="400" y="215" text-anchor="middle" class="box-detail">(event loop)</text>
+
+  <!-- Redis Client Box (Secondary - sync) -->
+  <rect x="540" y="100" width="180" height="140" rx="8" fill="#E0F7FA" stroke="#00ACC1" stroke-width="2"/>
+  <text x="630" y="135" text-anchor="middle" class="box-title">REDIS CLIENT</text>
+  <text x="630" y="160" text-anchor="middle" class="box-subtitle">SYNC ONLY</text>
+  <text x="630" y="215" text-anchor="middle" class="box-detail">(blocking)</text>
+</svg>
