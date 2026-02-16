@@ -109,3 +109,5 @@ docs/writing/posts/puppeteer-config.json
 # Blog drafts (local only)
 .drafts/*
 !.drafts/.gitkeep
+
+/Users/nilmonfortvila/Desktop/PROJECTS/nilmonfort-blog/docs/writing/posts/excalidraw_export.py
