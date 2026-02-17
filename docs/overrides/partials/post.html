@@ -1,0 +1,110 @@
+{#-
+  Custom blog post card template with diagram preview support
+-#}
+{#- Extract up to 2 diagrams from post content -#}
+{% set diagrams = [] %}
+{% set img_marker = '](img/' %}
+{#- Use post.markdown to get raw markdown content -#}
+{% if post.markdown %}
+  {% set content_str = post.markdown | string %}
+{% else %}
+  {% set content_str = (post.content | string) ~ (post.more | string if post.more else '') %}
+{% endif %}
+{% set ns = namespace(search_pos=0) %}
+{% for i in range(30) %}
+  {% set pos = content_str.find(img_marker, ns.search_pos) %}
+  {% if pos >= 0 %}
+    {#- In markdown, images look like: ![alt](img/diagram.svg) -#}
+    {#- pos points to ](img/, so skip the ]( part to get to img/ -#}
+    {% set img_start = pos + 2 %}
+    {#- Find the closing parenthesis -#}
+    {% set end_pos = content_str.find(')', img_start) %}
+    {% if end_pos > img_start %}
+      {% set img_path = content_str[img_start:end_pos] %}
+      {% if img_path.endswith('.svg') and diagrams | length < 2 %}
+        {% set img_filename = img_path.split('/')[-1] %}
+        {% set diagram_url = 'writing/img/' ~ img_filename %}
+        {#- Only add if not already in list (unique diagrams only) -#}
+        {% if diagram_url not in diagrams %}
+          {% set _ = diagrams.append(diagram_url) %}
+        {% endif %}
+      {% endif %}
+      {#- Always update search position to continue past this match -#}
+      {% set ns.search_pos = end_pos + 1 %}
+    {% else %}
+      {#- If no valid end found, skip past the marker -#}
+      {% set ns.search_pos = pos + img_marker|length %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+<article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    {% if post.authors %}
+      <nav class="md-post__authors md-typeset">
+        {% for author in post.authors %}
+          <span class="md-author">
+            <img src="{{ author.avatar | url }}" alt="{{ author.name }}">
+          </span>
+        {% endfor %}
+      </nav>
+    {% endif %}
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="{{ post.config.date.created }}">
+            {{- post.config.date.created | date -}}
+          </time>
+          {#- Collapse whitespace -#}
+        </li>
+        {% if post.categories %}
+          <li class="md-meta__item">
+            {{ lang.t("blog.categories.in") }}
+            {% for category in post.categories %}
+              <a href="{{ category.url | url }}" class="md-meta__link">
+                {{- category.title -}}
+              </a>
+              {%- if loop.revindex > 1 %}, {% endif -%}
+            {% endfor -%}
+          </li>
+        {% endif %}
+        {% if post.config.readtime %}
+          {% set time = post.config.readtime %}
+          <li class="md-meta__item">
+            {% if time == 1 %}
+              {{ lang.t("readtime.one") }}
+            {% else %}
+              {{ lang.t("readtime.other") | replace("#", time) }}
+            {% endif %}
+          </li>
+        {% endif %}
+      </ul>
+      {% if post.config.draft %}
+        <span class="md-draft">
+          {{ lang.t("blog.draft") }}
+        </span>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="md-post__body">
+    <div class="md-post__text md-typeset">
+      {{ post.content }}
+      {% if post.more %}
+        <nav class="md-post__action">
+          <a href="{{ post.url | url }}">
+            {{ lang.t("blog.continue") }}
+          </a>
+        </nav>
+      {% endif %}
+    </div>
+
+    {% if diagrams | length > 0 %}
+      <aside class="md-post__diagrams">
+        {% for diagram_url in diagrams %}
+          <img src="{{ diagram_url | url }}" alt="Diagram preview" class="md-post__diagram" loading="lazy">
+        {% endfor %}
+      </aside>
+    {% endif %}
+  </div>
+</article>

@@ -533,3 +533,72 @@ pre code { white-space: pre-wrap; }
     font-size: 2rem;
   }
 }
+
+/* Blog post card with diagram previews */
+.md-post__body {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.md-post__text {
+  flex: 1 1 65%;
+  min-width: 0; /* Allow text to shrink */
+}
+
+.md-post__diagrams {
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: flex-start;
+}
+
+.md-post__diagram {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background: var(--md-default-bg-color);
+  padding: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--md-shadow-z1);
+}
+
+.md-post__diagram:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--md-shadow-z2);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .md-post__body {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .md-post__diagrams {
+    flex: none;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .md-post__diagram {
+    max-height: 180px;
+  }
+}
+
+/* Tablet breakpoint */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .md-post__diagrams {
+    flex: 0 0 220px;
+  }
+
+  .md-post__diagram {
+    max-height: 160px;
+  }
+}
