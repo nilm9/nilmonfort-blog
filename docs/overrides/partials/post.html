@@ -21,7 +21,7 @@
     {% set end_pos = content_str.find(')', img_start) %}
     {% if end_pos > img_start %}
       {% set img_path = content_str[img_start:end_pos] %}
-      {% if img_path.endswith('.svg') and diagrams | length < 2 %}
+      {% if img_path.endswith('.svg') and diagrams | length < 1 %}
         {% set img_filename = img_path.split('/')[-1] %}
         {% set diagram_url = 'writing/img/' ~ img_filename %}
         {#- Only add if not already in list (unique diagrams only) -#}
