@@ -537,18 +537,18 @@ pre code { white-space: pre-wrap; }
 /* Blog post card with diagram previews */
 .md-post__body {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: flex-start;
   margin-top: 1rem;
 }
 
 .md-post__text {
-  flex: 1 1 65%;
+  flex: 1 1 60%;
   min-width: 0; /* Allow text to shrink */
 }
 
 .md-post__diagrams {
-  flex: 0 0 280px;
+  flex: 0 0 350px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -558,12 +558,12 @@ pre code { white-space: pre-wrap; }
 .md-post__diagram {
   width: 100%;
   height: auto;
-  max-height: 200px;
+  max-height: 250px;
   object-fit: contain;
   border-radius: 8px;
   border: 1px solid var(--md-default-fg-color--lightest);
   background: var(--md-default-bg-color);
-  padding: 0.75rem;
+  padding: 0.5rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: var(--md-shadow-z1);
 }
@@ -595,10 +595,33 @@ pre code { white-space: pre-wrap; }
 /* Tablet breakpoint */
 @media (min-width: 769px) and (max-width: 1024px) {
   .md-post__diagrams {
-    flex: 0 0 220px;
+    flex: 0 0 280px;
   }
 
   .md-post__diagram {
-    max-height: 160px;
+    max-height: 200px;
   }
+}
+
+/* Resume-specific list styling for better scannability */
+
+/* Add spacing between top-level achievements */
+.md-typeset h3 + p + ul > li,
+.md-typeset h3 + ul > li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Nested list items should be tighter */
+.md-typeset ul ul li {
+  margin-bottom: 0.35rem;
+  margin-top: 0.35rem;
+  line-height: 1.5;
+}
+
+/* Proper indentation for nested lists */
+.md-typeset ul ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
 }
