@@ -110,4 +110,17 @@ docs/writing/posts/puppeteer-config.json
 .drafts/*
 !.drafts/.gitkeep
 
-/Users/nilmonfortvila/Desktop/PROJECTS/nilmonfort-blog/docs/writing/posts/excalidraw_export.py
+# Excalidraw source files (we only track the exported SVGs)
+*.excalidraw
+
+# Diagram export scripts
+docs/writing/posts/excalidraw_export.py
+
+# Test/draft diagrams - hexagonal architecture series (unpublished)
+docs/writing/posts/img/hex-*.svg
+
+# Hexagonal architecture presentation files (drafts)
+hexagonal_architecture_*.md
+
+# Meme images (content creation assets)
+memes/
