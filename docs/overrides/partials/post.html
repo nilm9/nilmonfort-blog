@@ -1,7 +1,7 @@
 {#-
   Custom blog post card template with diagram preview support
 -#}
-{#- Extract up to 2 diagrams from post content -#}
+{#- Extract first diagram and subtitle from post content -#}
 {% set diagrams = [] %}
 {% set img_marker = '](img/' %}
 {#- Use post.markdown to get raw markdown content -#}
@@ -38,73 +38,84 @@
   {% endif %}
 {% endfor %}
 
+{#- Extract subtitle from markdown (first italic line after title) -#}
+{% set subtitle = '' %}
+{% if post.markdown %}
+  {% set lines = post.markdown.split('\n') %}
+  {% set ns_subtitle = namespace(found_title=false, found_subtitle=false) %}
+  {% for line in lines %}
+    {% if not ns_subtitle.found_subtitle %}
+      {% if line.startswith('# ') %}
+        {% set ns_subtitle.found_title = true %}
+      {% elif ns_subtitle.found_title and line.startswith('*') and line.endswith('*') and not line.startswith('**') %}
+        {% set subtitle = line[1:-1] %}
+        {% set ns_subtitle.found_subtitle = true %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
 <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    {% if post.authors %}
-      <nav class="md-post__authors md-typeset">
-        {% for author in post.authors %}
-          <span class="md-author">
-            <img src="{{ author.avatar | url }}" alt="{{ author.name }}">
-          </span>
-        {% endfor %}
-      </nav>
-    {% endif %}
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="{{ post.config.date.created }}">
-            {{- post.config.date.created | date -}}
-          </time>
-          {#- Collapse whitespace -#}
-        </li>
-        {% if post.categories %}
-          <li class="md-meta__item">
-            {{ lang.t("blog.categories.in") }}
-            {% for category in post.categories %}
-              <a href="{{ category.url | url }}" class="md-meta__link">
-                {{- category.title -}}
-              </a>
-              {%- if loop.revindex > 1 %}, {% endif -%}
-            {% endfor -%}
-          </li>
-        {% endif %}
-        {% if post.config.readtime %}
-          {% set time = post.config.readtime %}
-          <li class="md-meta__item">
-            {% if time == 1 %}
-              {{ lang.t("readtime.one") }}
-            {% else %}
-              {{ lang.t("readtime.other") | replace("#", time) }}
+  <a href="{{ post.url | url }}" class="md-post__link">
+    <div class="md-post__body">
+      <!-- LEFT SIDE (50%) -->
+      <div class="md-post__text">
+        <!-- Metadata row: avatar + date + category + readtime (horizontal) -->
+        <div class="md-post__header-row">
+          <!-- Avatar (inline) -->
+          {% if post.authors and post.authors[0].avatar %}
+            <div class="md-post__avatar">
+              <img src="{{ post.authors[0].avatar | url }}" alt="{{ post.authors[0].name }}">
+            </div>
+          {% endif %}
+
+          <!-- Metadata text -->
+          <div class="md-post__meta-inline">
+            <time datetime="{{ post.config.date.created }}">
+              {{ post.config.date.created.strftime('%b %d, %Y') }}
+            </time>
+            {% if post.categories %}
+              <span class="md-post__separator">·</span>
+              <span class="md-post__category-label">in</span>
+              <span class="md-post__category">
+                {{ post.categories[0].title }}
+              </span>
             {% endif %}
-          </li>
+            {% if post.config.readtime %}
+              {% set time = post.config.readtime %}
+              <span class="md-post__separator">·</span>
+              <span class="md-post__readtime">
+                {% if time == 1 %}
+                  {{ lang.t("readtime.one") }}
+                {% else %}
+                  {{ lang.t("readtime.other") | replace("#", time) }}
+                {% endif %}
+              </span>
+            {% endif %}
+          </div>
+        </div>
+
+        <!-- Title -->
+        <h2 class="md-post__title">{{ post.title }}</h2>
+
+        <!-- Subtitle (italic tagline) -->
+        {% if subtitle %}
+          <div class="md-post__subtitle">{{ subtitle }}</div>
         {% endif %}
-      </ul>
-      {% if post.config.draft %}
-        <span class="md-draft">
-          {{ lang.t("blog.draft") }}
-        </span>
+
+        {% if post.config.draft %}
+          <span class="md-draft">
+            {{ lang.t("blog.draft") }}
+          </span>
+        {% endif %}
+      </div>
+
+      <!-- RIGHT SIDE (50%) - Diagram -->
+      {% if diagrams | length > 0 %}
+        <aside class="md-post__diagrams">
+          <img src="{{ diagrams[0] | url }}" alt="Post diagram" class="md-post__diagram" loading="lazy">
+        </aside>
       {% endif %}
     </div>
-  </header>
-
-  <div class="md-post__body">
-    <div class="md-post__text md-typeset">
-      {{ post.content }}
-      {% if post.more %}
-        <nav class="md-post__action">
-          <a href="{{ post.url | url }}">
-            {{ lang.t("blog.continue") }}
-          </a>
-        </nav>
-      {% endif %}
-    </div>
-
-    {% if diagrams | length > 0 %}
-      <aside class="md-post__diagrams">
-        {% for diagram_url in diagrams %}
-          <img src="{{ diagram_url | url }}" alt="Diagram preview" class="md-post__diagram" loading="lazy">
-        {% endfor %}
-      </aside>
-    {% endif %}
-  </div>
+  </a>
 </article>

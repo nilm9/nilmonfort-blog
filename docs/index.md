@@ -8,9 +8,9 @@ hide:
   <div class="hero-content">
     <h1>Hey, I'm Nil Monfort</h1>
     
-    <p>I'm an AI Cloud Engineer passionate about building intelligent systems that solve real-world problems. I write about RAG architectures, LLM applications, and the intersection of AI and clean software engineering.</p>
+    <p>I'm an AI Solutions Architect passionate about building intelligent systems that solve real-world problems. I write about RAG architectures, LLM applications, and the intersection of AI and clean software engineering.</p>
     
-    <p>Currently working as an AI Engineer at Inditex and sharing insights through <a href="writing/">my writing</a>.</p>
+    <p>Currently working as an AI Solutions Architect at knowmad mood and <a href="https://www.hexalonai.com" target="_blank" rel="noopener noreferrer">Hexalon AI</a>, sharing insights through <a href="writing/">my writing</a>.</p>
   </div>
   
   <div class="hero-image">
@@ -32,39 +32,27 @@ If I'll spend more than three days on a project, I shape it with hexagonal archi
 
 ---
 
-<!--
 ## What People Say
 
 <div class="testimonial">
   <div class="testimonial-content">
-    <p>"Nil transformed our RAG system from a prototype to a production-ready platform. His expertise in hexagonal architecture and vector databases saved us months of development time. The system now handles thousands of queries daily with 99.9% uptime."</p>
+    <p>"I've worked closely with Nil on an internal AI tool for our team at Buff and it's been outstanding. He's proactive, communicates often, and pays attention to detail. Nil led the full journey from scoping to PoC to MVP - architecting a modern cloud solution with agentic AI that materially increased our creative speed and output. If you need someone who moves quickly without sacrificing quality, I highly recommend Nil."</p>
     <div class="testimonial-author">
-      <strong>Sarah Chen</strong><br>
-      <em>CTO at TechFlow</em>
+      <strong>Sergi Valero i Bover</strong><br>
+      <em>CIO at BUFF®</em>
     </div>
   </div>
 </div>
 
 <div class="testimonial">
   <div class="testimonial-content">
-    <p>"Working with Nil on our AI agent validation system was exceptional. He built a comprehensive testing framework that caught issues before they reached production. His attention to detail and clean code practices made the entire project a pleasure to work on."</p>
+    <p>"Collaborating with Nil has been one of the most enriching professional experiences I've had. His curiosity shows in his voracious reading habits and constant pursuit of the latest tech. His data science expertise - which he first acquired through self-directed study - is truly impressive. Teamwork with Nil has always been seamless. He's not afraid to discuss unclear matters and consistently considers all options to achieve the best results. His organizational skills and professional commitment are commendable. I truly enjoyed working with Nil on the same team."</p>
     <div class="testimonial-author">
-      <strong>Marcus Rodriguez</strong><br>
-      <em>Lead AI Engineer at DataCorp</em>
+      <strong>Carlos Martínez García-Villarrubia</strong><br>
+      <em>Co-Founder of BeeL.es | CTO at Caricalia</em>
     </div>
   </div>
 </div>
-
-<div class="testimonial">
-  <div class="testimonial-content">
-    <p>"Nil's approach to AI engineering is methodical and results-driven. He helped us implement a multi-tenant RAG platform that scaled from 10 to 10,000 users without breaking a sweat. His documentation and knowledge sharing made our entire team better."</p>
-    <div class="testimonial-author">
-      <strong>Dr. Elena Petrov</strong><br>
-      <em>Head of AI Research at InnovateLab</em>
-    </div>
-  </div>
-</div>
--->
 
 ---
 

@@ -62,6 +62,9 @@ plugins:
         - categories
         - tags
 
+hooks:
+  - hooks/cta_footer.py
+
 markdown_extensions:
   - attr_list
   - admonition

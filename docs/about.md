@@ -8,7 +8,7 @@ hide:
   <div class="hero-content">
     <h1>About</h1>
     
-    <p>I'm Nil Monfort, a computer engineer who loves building systems. I started coding in 2020 while studying automotive engineering. Cars didn't click; code did. I switched to computer science and never looked back. Today I work as an AI engineer at Inditex and I also take on freelance projects.</p>
+    <p>I'm Nil Monfort, a computer engineer who loves building systems. I started coding in 2020 while studying automotive engineering. Cars didn't click; code did. I switched to computer science and never looked back. Today I work as an AI Solutions Architect at knowmad mood and <a href="https://www.hexalonai.com" target="_blank" rel="noopener noreferrer">Hexalon AI</a>.</p>
   </div>
   
   <div class="hero-image">
@@ -35,7 +35,7 @@ I start by clarifying the problem. Then I ship in small, usable slices that work
 
 ## My techie path
 
-I learned the basics in a Python class and switched my major soon after. I worked frontend at a startup and learned AWS, then moved to backend and ML, algorithms, the good stuff. Later I did data engineering, which sharpened my system thinking, but I missed daily coding. Now at Inditex I work on RAG and agent systems, and I still get the same kick from shipping real things.
+I learned the basics in a Python class and switched my major soon after. I worked frontend at a startup and learned AWS, then moved to backend and ML, algorithms, the good stuff. Later I did data engineering, which sharpened my system thinking, but I missed daily coding. Now as an AI Solutions Architect I work on RAG and agent systems, and I still get the same kick from shipping real things.
 
 ## Beyond code
 
