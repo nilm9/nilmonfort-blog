@@ -20,7 +20,7 @@ hide:
 
 # Claude Code Deleted My Home Directory: Three Guardrails That Would Have Stopped It
 
-*Horror stories of AI coding gone wrong and the deterministic safety net that stops them.*
+*Horror stories of AI coding gone wrong and the deterministic safety net that stops them. *
 
 ---
 
