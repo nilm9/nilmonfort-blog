@@ -124,3 +124,8 @@ hexagonal_architecture_*.md
 
 # Meme images (content creation assets)
 memes/
+
+# Clutter files - not useful for public visitors
+plan.md
+example/
+boilerplate-setup.sh
