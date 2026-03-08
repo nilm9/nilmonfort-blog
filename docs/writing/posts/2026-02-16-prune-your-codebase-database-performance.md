@@ -192,7 +192,7 @@ connections:
     label: "88% reduction"
 excalidraw:diagram-end -->
 
-![Before and After - Query Count Per Page Load](img/prune-before-after-queries-f2c09f4a64.svg)
+![Before and After - Query Count Per Page Load](img/prune-before-after-queries-6a297d48ba.svg)
 
 ## The Pruning Habit
 
@@ -244,7 +244,7 @@ connections:
     label: "Stays fast"
 excalidraw:diagram-end -->
 
-![Codebase Growth - With and Without Pruning](img/prune-codebase-growth-metaphor-633bea06c6.svg)
+![Codebase Growth - With and Without Pruning](img/prune-codebase-growth-metaphor-de68714f28.svg)
 
 ## Start With One Page
 

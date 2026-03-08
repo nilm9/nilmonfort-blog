@@ -186,7 +186,7 @@ description: |
   RAG retrieves chunks. Navigation reads full sections.
 excalidraw:diagram-end -->
 
-![RAG vs Structured Navigation](img/rag-vs-navigation-flow-39cd16c925.svg)
+![RAG vs Structured Navigation](img/rag-vs-navigation-flow-74820da2dd.svg)
 
 Here's how the two approaches compare:
 

@@ -70,7 +70,7 @@ description: |
   Any XSS vector can read localStorage, steal the token, and impersonate the user.
 excalidraw:diagram-end -->
 
-![The localStorage Attack Chain](img/token-theft-attack-chain-46eb9d1d7b.svg)
+![The localStorage Attack Chain](img/token-theft-attack-chain-bb5bfd1512.svg)
 
 ## Why AI-Assisted Code Makes This Worse
 
@@ -119,7 +119,7 @@ description: |
   Refresh token in httpOnly cookie (browser manages it, JS can't read it at all).
 excalidraw:diagram-end -->
 
-![Secure Token Architecture](img/secure-token-architecture-f387b2b55b.svg)
+![Secure Token Architecture](img/secure-token-architecture-e6b66cf22a.svg)
 
 ## The Trade-Off You're Actually Making
 
@@ -169,7 +169,7 @@ description: |
   Three independent layers. Breaking one doesn't break the others.
 excalidraw:diagram-end -->
 
-![Defense in Depth - Three Layers of Token Protection](img/defense-in-depth-layers-e6ea96b212.svg)
+![Defense in Depth - Three Layers of Token Protection](img/defense-in-depth-layers-8dfcc24615.svg)
 
 ## The Checklist I Now Follow
 

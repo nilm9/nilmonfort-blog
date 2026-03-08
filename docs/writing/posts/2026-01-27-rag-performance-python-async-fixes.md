@@ -61,7 +61,7 @@ async def embed_texts(self, texts: list[str]) -> list[list[float]]:
 
 `asyncio.gather()` runs all the embedding calls at once. Same 100 chunks, same 200ms per call, but now they run in parallel. Total time: 200ms instead of 20 seconds.
 
-![Sequential vs Parallel Embedding](img/async-sequential-vs-parallel.excalidraw.svg)
+![Sequential vs Parallel Embedding](img/async-sequential-vs-parallel-86de12afc5.svg)
 
 The embedding provider handles the concurrency. Most APIs (OpenAI, Cohere, local Ollama) can process multiple requests at once. You're just not taking advantage of it with a sequential loop.
 
@@ -98,7 +98,7 @@ async def enqueue(self, job_type: str, payload: dict) -> str:
 
 `asyncio.to_thread()` runs the synchronous boto3 call in a thread pool. Your event loop stays free to handle other requests. The API doesn't freeze while waiting for AWS.
 
-![Event Loop Blocking vs Non-Blocking](img/async-event-loop-blocking.excalidraw.svg)
+![Event Loop Blocking vs Non-Blocking](img/async-event-loop-blocking-6afbcef17e.svg)
 
 This pattern applies to any synchronous library you're using inside async code. Database drivers without async support, file I/O, third-party SDKs - wrap them in `asyncio.to_thread()`.
 
@@ -157,7 +157,7 @@ async def search(self, query_vector: list[float], filters: dict = None):
 
 The key insight: `payload.` prefix was wrong. Qdrant stores metadata directly, so the key is just `key`, not `payload.key`. That bug was why I disabled filters in the first place.
 
-![Database vs Python Filtering](img/async-db-vs-python-filter.excalidraw.svg)
+![Database vs Python Filtering](img/async-db-vs-python-filter-9d7ec8e2f6.svg)
 
 Let the database do the filtering. It's faster, uses less bandwidth, and scales better.
 

@@ -142,7 +142,7 @@ Add fixed sleep delays between requests. This works until you get more traffic, 
 
 We added three layers of protection:
 
-![Defense in Depth: Rate Limiting](img/rate-limit-defense-in-depth.excalidraw.svg)
+![Defense in Depth: Rate Limiting](img/rate-limit-defense-in-depth-8c24d7a9e3.svg)
 
 **Layer 1: Semaphore for Concurrency**
 
@@ -228,7 +228,7 @@ Bypass the state machine validation for retries. Just force the status to EXTRAC
 
 ### The Solution: Update Valid Transitions
 
-![Document State Machine with Retry](img/state-machine-transitions.excalidraw.svg)
+![Document State Machine with Retry](img/state-machine-transitions-fc8db487d8.svg)
 
 FAILED shouldn't be terminal. Documents fail for transient reasons (rate limits, timeouts, network issues). They should be retryable:
 
